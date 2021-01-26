@@ -1,0 +1,3 @@
+"C:\Users\Curso Java\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\202.7660.37\bin\cmake\win\bin\cmake.exe" -E rm -f CMakeFiles\sorty.dir/objects.a
+C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\ar.exe cr CMakeFiles\sorty.dir/objects.a @CMakeFiles\sorty.dir\objects1.rsp
+C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\gcc.exe -g   -Wl,--whole-archive CMakeFiles\sorty.dir/objects.a -Wl,--no-whole-archive  -o sorty.exe -Wl,--out-implib,libsorty.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\sorty.dir\linklibs.rsp

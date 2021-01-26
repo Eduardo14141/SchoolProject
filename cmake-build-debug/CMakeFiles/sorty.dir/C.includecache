@@ -1,0 +1,32 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/Users/Curso Java/CLionProject/sorty/main.c
+time.h
+-
+stdio.h
+-
+stdlib.h
+-
+random_numbers.h
+C:/Users/Curso Java/CLionProject/sorty/random_numbers.h
+sort_algorithms.h
+C:/Users/Curso Java/CLionProject/sorty/sort_algorithms.h
+
+C:/Users/Curso Java/CLionProject/sorty/random_numbers.h
+time.h
+-
+stdlib.h
+-
+float.h
+-
+unistd.h
+-
+
+C:/Users/Curso Java/CLionProject/sorty/sort_algorithms.h
+
