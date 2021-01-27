@@ -3,25 +3,32 @@
 #include <stdlib.h>
 #include "random_numbers.h"
 #include "sort_algorithms.h"
-#define SIZE_OF_ARRAY 50
+#define SIZE_OF_ARRAY 50000
 double *array;
 double *array2;
 
 void startArray();
-void duplicate();
-
+void restore();
 
 int main()
 {
     startArray();
-    quickSort(array2, SIZE_OF_ARRAY);
-    printf("\tOriginal\t\tSorted\n\n");
+    printf("\n%ld", shellSort(array2, SIZE_OF_ARRAY));
+    restore();
 
-    for(int i=0; i<SIZE_OF_ARRAY ; i++)
-        printf("\t%lf\t\t%lf\n", array[i], array2[i]);
+    printf("\n%ld",bubbleSort(array2, SIZE_OF_ARRAY));
+    restore();
 
-    system ("pause");
-    return EXIT_SUCCESS;
+    printf("\n%ld",selectionSort(array2, SIZE_OF_ARRAY));
+    restore();
+
+    printf("\n%ld", insertionSort(array2, SIZE_OF_ARRAY));
+    restore();
+
+    printf("\n%ld", quickSort(array2, SIZE_OF_ARRAY));
+
+
+    return 0;
 }
 
 
@@ -31,10 +38,10 @@ void startArray()
     array=(double*)malloc(sizeof(double)*SIZE_OF_ARRAY);
     array2=(double*)malloc(sizeof(double)*SIZE_OF_ARRAY);
     fillArray(array, SIZE_OF_ARRAY);
-    duplicate();
+    restore();
 }
 
-void duplicate()
+void restore()
 {
     memcpy(array2, array, SIZE_OF_ARRAY * sizeof(double));
 }
