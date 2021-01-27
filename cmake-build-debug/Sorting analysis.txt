@@ -1,0 +1,15 @@
+Consideraciones:	1.- Se usó el mismo set de números para cada método de ordenamiento	2.- Es posible que los algoritmos ejecutados al final sean beneficiadospuesto que la máquina "ya calentó"
+Ordenados por iteraciones:
+
+Name: Quick sort	Iterations: 156163	Time: 2(ms)
+Name: Bubble sort	Iterations: 49979069	Time: 395(ms)
+Name: Selection sort	Iterations: 49995000	Time: 121(ms)
+Name: Insertion sort	Iterations: 49995000	Time: 260(ms)
+Name: Shell sort	Iterations: 98276374	Time: 404(ms)
+Ordenados por Tiempo:
+
+Name: Quick sort	Iterations: 156163	Time: 2(ms)
+Name: Selection sort	Iterations: 49995000	Time: 121(ms)
+Name: Insertion sort	Iterations: 49995000	Time: 260(ms)
+Name: Bubble sort	Iterations: 49979069	Time: 395(ms)
+Name: Shell sort	Iterations: 98276374	Time: 404(ms)

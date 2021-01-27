@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <string.h>
 
-FILE *open_file(char *name)
+FILE * openFile(char *name)
 {
 	FILE *file;
 	file = fopen(name, "w");
@@ -12,21 +12,22 @@ FILE *open_file(char *name)
 void write2File(FILE * file, char * text)
 {
 	fputs(text, file);
-	
 }
 
 void array2char(double * array, unsigned int size, FILE * file)
 {
-	char step1[size*20];
+//	char arr2char[size * 25];
 	char temp[20];
     
-	for(int i=0; i<size; i++)
+	for(int i = 0; i < size; i++)
 	{
 		sprintf(temp, "%lf", array[i]);
-    	strcat(step1, temp);
-    	strcat(step1, "\n");
+    	strcat(temp, "\n");
+    	write2File(file, temp);
 	}
-    write2File(file, step1);
+
+
+    //write2File(file, arr2char);
 }
 
 void closeFile(FILE *file)
