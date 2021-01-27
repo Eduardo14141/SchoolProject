@@ -1,0 +1,36 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/Users/Curso Java/CLionProject/SchoolProject/main.c
+random_numbers.h
+C:/Users/Curso Java/CLionProject/SchoolProject/random_numbers.h
+sort_algorithms.h
+C:/Users/Curso Java/CLionProject/SchoolProject/sort_algorithms.h
+sort6file.h
+C:/Users/Curso Java/CLionProject/SchoolProject/sort6file.h
+
+C:/Users/Curso Java/CLionProject/SchoolProject/random_numbers.h
+time.h
+-
+stdlib.h
+-
+float.h
+-
+unistd.h
+-
+
+C:/Users/Curso Java/CLionProject/SchoolProject/sort6file.h
+stdio.h
+-
+string.h
+-
+
+C:/Users/Curso Java/CLionProject/SchoolProject/sort_algorithms.h
+time.h
+-
+

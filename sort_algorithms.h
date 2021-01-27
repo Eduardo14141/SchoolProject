@@ -1,4 +1,6 @@
+#include <time.h>
 
+clock_t time1;
 
 void swap(double*x, double*y)
 {
@@ -6,8 +8,9 @@ void swap(double*x, double*y)
 	*x = *y;
 	*y = aux;
 }
-void bubbleSort(double *array, unsigned int size)
+clock_t bubbleSort(double *array, unsigned int size, unsigned long *pointer)
 {
+	time1=clock();
 	char stop;
 	for(int i =0; i<size ; i++)
 	{
@@ -19,13 +22,16 @@ void bubbleSort(double *array, unsigned int size)
 				swap(&array[j], &array[j+1]);
 				stop = 0;
 			}
+			(*pointer)++;
 		}
 		if(stop)
 			break;
 	}
+	return clock()-time1;
 }
-void selectionSort(double *array, unsigned int size)
+clock_t selectionSort(double *array, unsigned int size, unsigned long *pointer)
 {
+	time1=clock();
 	int min;
 	for(int i=0; i<size-1 ; i++)
 	{
@@ -36,25 +42,31 @@ void selectionSort(double *array, unsigned int size)
 			{
 				min = j;
 			}
+			(*pointer)++;
 		}
 		swap(&array[min], &array[i]);
 	}
+	return clock()-time1;
 }
-void insertionSort(double *array, unsigned int size)
+clock_t insertionSort(double *array, unsigned int size, unsigned long *pointer)
 {
+	time1=clock();
 	for(int i=0 ; i<size-1 ; i++)
 	{
 		for(int j=i+1; j>0 ; j--)
 		{
 			if(array[j-1]>array[j])
 				swap(&array[j], &array[j-1]);
+				
+			(*pointer)++;
 		}
 	}
+	return clock()-time1;
 }
-
-void quickSort(double *array, unsigned int size)
+clock_t quickSort(double *array, unsigned int size, unsigned long *pointer)
 {
-    unsigned int pivot = 0, size_tmp = size - 1;
+	clock_t time2=clock();
+	unsigned int pivot = 0, size_tmp = size - 1;
 
     for (unsigned int i = 1; i < size && size_tmp >= i;) {
         if(array[i] < array[pivot]) {
@@ -62,18 +74,21 @@ void quickSort(double *array, unsigned int size)
             pivot = i++;
         } else
             swap(&array[i], &array[size_tmp--]);
+            (*pointer)++;
     }
     //Quicksort Left
     if(pivot > 0)
-        quickSort(array, pivot);
+        quickSort(array, pivot, pointer);
 
     //Quicksort right
     if(pivot < size - 1)
-        quickSort(array + pivot + 1, size - pivot - 1);
+        quickSort(array + pivot + 1, size - pivot - 1, pointer);
+        return clock()-time2;
 }
 
-void shellSort(double *array, unsigned int size)
+clock_t shellSort(double *array, unsigned int size, unsigned long *pointer)
 {
+	time1=clock();
 	int j=0;
 	unsigned int gap =  size/2;
 	while(gap > 0)
@@ -84,12 +99,13 @@ void shellSort(double *array, unsigned int size)
 			{
 				if(array[i]<array[j])
 					swap(&array[j], &array[i]);
+					(*pointer)++;
 			}
 		}
 		gap/=2;
 	}
+	return clock()-time1;
 }
-
 
 
 
